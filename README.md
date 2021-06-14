@@ -15,3 +15,5 @@
  6. [프로토타입 이해하기](javascript/210613.md)
  
  7. [CORS (Cross-Origin-Resource Sharting) 이해하기](javascript/210614.md)
+ 
+ 8. [Generators 이해하기](javascript/210614_1.md)
