@@ -13,3 +13,5 @@
  5. [코드품질 바벨과 폴리필](javascript/210611.md)
  
  6. [프로토타입 이해하기](javascript/210613.md)
+ 
+ 7. [CORS (Cross-Origin-Resource Sharting) 이해하기](javascript/210614.md)
