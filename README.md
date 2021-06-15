@@ -24,3 +24,4 @@
 > React
 
  1. [Memoization을 이용한 성능 향상](react/Memoization.md)
+ 2. [MVC 디자인 패턴](react/mvp패턴.md)
