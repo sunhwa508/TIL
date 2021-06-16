@@ -75,3 +75,31 @@ module.exports = {
   },
 };
 ```
+
+
+[post의 view수를 카운팅 하도록 커스터마이징](https://github.com/sunhwa508/strapi/blob/main/api/post/models/post.js)
+
+```
+'use strict';
+
+const { default: createStrapi } = require("strapi");
+
+/**
+ * Read the documentation (https://strapi.io/documentation/developer-docs/latest/development/backend-customization.html#lifecycle-hooks)
+ * to customize this model
+ */
+
+module.exports = {
+    lifecycles:{
+        async afterFindOne(result, params, populate){
+        //strapi의 쿼리 post를 찾고, 쿼리를 불러올때마다 view를 1씩 증가시키도록 
+            const res = await strapi.query('post')
+            .model.query(q => {
+                q.where('id', result.id);
+                q.increment('view',1);
+            }).fetch();
+            console.log(res)
+        }
+    }
+};
+```
