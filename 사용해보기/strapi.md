@@ -47,7 +47,9 @@ Strapi는 기본적으로 로그인까지 전부 세팅이 되어있습니다
 
 이외에 커스터 마이징을 위해선 Strapi 문서를 참고하여 수정 가능합니다.
 
-[post 작성시 auth 유저정보 저장시키기](https://github.com/sunhwa508/strapi/blob/main/api/post/controllers/post.js)
+## strapi 커스터마이징 하기
+1. post 작성시 auth 유저정보 저장시키기 👩‍💻👩‍💻
+[코드보기](https://github.com/sunhwa508/strapi/blob/main/api/post/controllers/post.js)
 
 ```
 'use strict';
@@ -76,8 +78,8 @@ module.exports = {
 };
 ```
 
-
-[post의 view수를 카운팅 하도록 커스터마이징](https://github.com/sunhwa508/strapi/blob/main/api/post/models/post.js)
+2. post의 view수를 카운팅 하도록 커스터마이징 👩‍💻👩‍💻
+[코드보기](https://github.com/sunhwa508/strapi/blob/main/api/post/models/post.js)
 
 ```
 'use strict';
