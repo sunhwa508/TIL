@@ -47,5 +47,31 @@ Strapi는 기본적으로 로그인까지 전부 세팅이 되어있습니다
 
 이외에 커스터 마이징을 위해선 Strapi 문서를 참고하여 수정 가능합니다.
 
+[post 작성시 auth 유저정보 저장시키기](https://github.com/sunhwa508/strapi/blob/main/api/post/controllers/post.js)
 
+```
+'use strict';
 
+const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
+
+module.exports = {
+  async create(ctx) {
+    let entity;
+
+    let user = ctx.state.user.id;
+    //유저의 고유번호 id를 가져와
+    ctx.request.body.author = user;
+    // body 의 author 자리에 넣어줍니다.
+    
+    // strapi 문서 참고 코드 👇👇
+    if (ctx.is('multipart')) {
+      const { data, files } = parseMultipartData(ctx);
+      entity = await strapi.services.post.create(data, { files });
+    } else {
+      entity = await strapi.services.post.create(ctx.request.body);
+    }
+    
+    return sanitizeEntity(entity, { model: strapi.models.post });
+  },
+};
+```
