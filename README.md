@@ -1,8 +1,6 @@
 # TIL
 
-선화의 6월 TIL 목차 📑📑 기술면접준비
-
-> Javascript
+## Javascript
 
  1. [웹과 브라우저 렌더링, 작동방식](javascript/210607.md)
  
@@ -23,10 +21,14 @@
  9. [Array 대체품 Sets](javascript/210615.md)
 
 
-> React
+## React
 
  1. [Memoization을 이용한 성능 향상](react/Memoization.md)
  
  2. [React 18](react/react18.md)
  
  3. [MVC 디자인 패턴](react/mvp패턴.md)
+
+## 매일매일 새로운 프론트엔드
+
+1. 백엔드역할을 하는 strapi 사용해보자
