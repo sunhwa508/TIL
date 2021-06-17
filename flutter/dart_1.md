@@ -1,4 +1,4 @@
-# Dart 왕왕초보 다트시작하기
+# Dart 왕초보
 
 [Dart pad](https://dartpad.dartlang.org/)
 위 링크에서 다트언어를 연습할 수 있습니다. 
