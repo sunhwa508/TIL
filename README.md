@@ -20,7 +20,7 @@
  
  9. [Array 대체품 Sets](javascript/210615.md)
  
- 10.[for ...in & for ...of](javascript/210618.md) 
+ 10. [for ...in & for ...of](javascript/210618.md) 
 
 
 ## React
