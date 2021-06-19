@@ -1,4 +1,4 @@
-# TIL
+# TIL 배운것을 하나하나 기록하는 공간입니다
 
 ## Javascript
 
