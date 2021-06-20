@@ -1,4 +1,5 @@
 # class 선언 및 constructor
+##  class 선언하기
 ```
 void main(){
   // OOP - Object Oriented Programming
@@ -44,3 +45,46 @@ void main(){
     }
 }
 ```
+
+## Getter and Setter
+```
+void main() {
+  // Getter => 값을 가져올때
+  // Setter => 값을 변경할때
+
+  Idol winter = new Idol(name: '윈터', group: '에스파');
+
+  winter.sayName();
+
+  print(winter._name);
+  print(winter.name);
+}
+
+class Idol {
+  // private variable
+  String _name;
+  String _group;
+
+  Idol({
+    String name,
+    String group,
+  })  : this._name = name,
+        this._group = group;
+
+  void sayName() {
+    print('내 이름은 ${this._name} 입니다.');
+  }
+
+  get name {
+    return this._name;
+  }
+
+  set name(String name) {
+    this._name = name;
+  }
+}
+
+```
+
+## class inheritance
+
