@@ -87,4 +87,62 @@ class Idol {
 ```
 
 ## class inheritance
+```
+void main() {
+  Idol winter = new Idol(name: '윈터', group: '에스파');
+
+  winter.sayName();
+  winter.sayGroup();
+ 
+  BoyGroup rm = new BoyGroup('RM', 'BTS');
+  print(rm.name);
+  print(rm.group);
+  rm.sayMale();
+  
+  GirlGroup wendy = new GirlGroup('웬디', '레드벨벳');
+  wendy.sayFemale();
+}
+
+class Idol {
+  String name;
+  String group;
+
+  Idol({
+    String name = '',
+    String group = '',
+  })  : this.name = name,
+        this.group = group;
+
+  void sayName() {
+    print('저는 ${this.name} 입니다');
+  }
+
+  void sayGroup() {
+    print('저는 ${this.group}입니다');
+  }
+}
+
+//extends - 상속 할때 사용
+class BoyGroup extends Idol {
+  BoyGroup(
+    String name,
+    String group,
+  ) : super(name: name, group: group);
+  
+  void sayMale(){
+    print('저는 남자 아이돌입니다.');
+  }
+}
+
+//자식끼리는 상속되지 않고 부모에만 상속됩니다.
+class GirlGroup extends Idol {
+  GirlGroup(
+  String name,
+  String group,): super(name:name, group: group);
+  
+  void sayFemale(){
+    print('저는 여자 아이돌입니다.');
+  }
+}
+```
 
