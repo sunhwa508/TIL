@@ -1,4 +1,4 @@
-# Overriding, Static, this, super, interface
+# Overriding, Static, this, super, interface, Cascade Operator
 ## class Method Overriding
 ```
 void main() {
@@ -185,3 +185,35 @@ class GirlGroup implements IdolInterface{
 
 ## interface / inheritant
 변수와 메소드를 강제했으면 좋겠다 extends => interface가 더 맞는 방향
+
+## Cascade Operator
+```
+void main() {
+  Idol idol = new Idol('슬기', '레드벨벳');
+
+  idol.sayName();
+  idol.sayGroup();
+
+  //cascade로 불필요한 코드 줄이기
+  new Idol('윈터', '에스파')
+    ..sayName()
+    ..sayGroup();
+}
+
+class Idol {
+  String name;
+  String group;
+
+  Idol(String name, String group)
+      : this.name = name,
+        this.group = group;
+
+  void sayName() {
+    print('제 이름은 ${this.name} 입니다');
+  }
+
+  void sayGroup() {
+    print('저는 ${this.group} 소속 입니다.');
+  }
+}
+```
