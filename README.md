@@ -34,6 +34,11 @@
  
  3. [MVC 디자인 패턴](react/mvp패턴.md)
 
+## Redux
+
+1. [기본원리](redux/redux.md)
+
+
 ## 매일매일 새로운 프론트엔드
 
 1. [백엔드역할을 하는 strapi 사용해보자](사용해보기/strapi.md)
