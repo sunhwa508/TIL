@@ -1,6 +1,6 @@
 # 리덕스의 원리와 불변성 ⚖️
 
-## 리덕스 기본 용어 정리
+## 리덕스 기본 용어 정리 😛
 > global state = A single source of truth <br />
 > Actions = state is read-only <br />
 > Reducers = Changes are made with pure functions
@@ -75,6 +75,25 @@ store.dispatch({type: "INCREMENT"}) // {count: 2}
 store.dispatch(decrement())
 store.dispatch({type: "WEIRD"})
 ```
+
+## 미들웨어와 리덕스 데브툴즈
+
+```javascript
+import { composeWithDevTools } from 'redux-devtools-extension';
+// composeWithDavTools가 있어야 브라우저에서 익스텐션 사용이 가능 ⚙️
+const configureStore = () => {
+    const middlewares: [] = [];
+    // composeWithDevTools -> 액션히스토리가 쌓이면 성능에 문제가 됨으로 개발용일때만 동작 하게 한다.
+    const enhancer = process.env.NODE_ENV === 'production'
+        ? compose(applyMiddleware(...middlewares))
+        : composeWithDevTools(applyMiddleware(...middlewares))
+    const store = createStore(reducer, enhancer);
+    return store
+}
+```
+
+### HYDRATE
+getinitialProps 가 안쓰이고 getStaticProps, getserversiceProps 로 바뀌면서 렌더과정이 바뀌게 되면서 생겨남
 
 ## 리덕스 사가
 ### 용어정리
