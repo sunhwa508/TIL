@@ -1,14 +1,14 @@
 # 리덕스의 원리와 불변성 ⚖️
 
 ## 리덕스 기본 용어 정리
-> global state = A single source of truth
-> Actions = state is read-only
+> global state = A single source of truth <br />
+> Actions = state is read-only <br />
 > Reducers = Changes are made with pure functions
 
 1. Action & action creators
 2. Dispatch
 3. Reducers
-4. Store
+4. Store (state 와 reducers 을 포함 하는 것)
 
 ![Untitled](https://user-images.githubusercontent.com/61695175/125471256-869c1b29-d8b5-4ce9-8dad-95c80d06e23f.png)
 
