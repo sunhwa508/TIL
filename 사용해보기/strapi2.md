@@ -64,8 +64,16 @@ git commit -m "Initial Commit"
 ```
 path: ./my-project/
 heroku create
+
+git push heroku HEAD:main
+
 ```
 여기서 ```custom-project-name.heroku.com```로 URL를 커스터마이징 해 줄 수 있지만 (저는 그냥 홈페이지에서 바꾸는게 편하더라고요 😅)
+
+
+![image](https://user-images.githubusercontent.com/61695175/128591703-12f1fb40-c1a8-4dfd-9470-9f528206fce6.png)
+
+
 
 ### heroku + postgreSQL DATABASE 연동
 
@@ -164,7 +172,7 @@ module.exports = ({ env }) => ({
 heroku config:set MY_HEROKU_URL=$(heroku info -s | grep web_url | cut -d= -f2)
 ```
 그리고 .NET용으로도 Heroku 환경변수 설정이 필요합니다. (MY_HEROKU_URL = 프로젝트 배포 주소) <br/>
-(여기서 .NET은 런타임에 애플리케이션 동작을 구성할 수 있는 다음과 같은 메커니즘을 제공합니다.)
+(여기서 .NET은 런타임에 애플리케이션 동작을 구성할 수 있는 메커니즘을 제공합니다.)
 
 
 #### 6 Install the pg node module <br/>
@@ -188,7 +196,7 @@ heroku open //배포가 완료되면 start 명령어
 
 ![image](https://user-images.githubusercontent.com/61695175/128589410-287a6f88-5900-4136-8a5e-a90d002066f5.png)
 
-여기서 콘텐츠타입이나 관계설정등 백엔드 경험이 있었던 준영님의 도움으로 우리 프로젝트에 알맞는 테이블 과 타입들을 설정 할 수 있었다. <br/>
+여기서 콘텐츠타입이나 관계설정은 백엔드 경험이 있었던 준영님의 도움으로 우리 프로젝트에 알맞는 테이블 과 타입들을 설정 할 수 있었다. <br/>
 자란다 과제에서 필요한 Menu속성과 users 속성
 
 ![image](https://user-images.githubusercontent.com/61695175/128589467-0d2ca3da-f19b-476f-b2a7-da0917ebddec.png)
@@ -215,7 +223,7 @@ heroku open //배포가 완료되면 start 명령어
 
 ![image](https://user-images.githubusercontent.com/61695175/128589752-a7c0af24-8e58-4f69-aa07-5f604cb4f8e1.png) <br/>
 
-**jwt 토큰 기한이 30일인데 리프레시 토큰을 제공하지 않는다는 이슈가 있다고 하니 실제 프로덕트에서는 사용하기엔 무리가 있지 않나 싶긴 하다 🥲**
+**jwt 토큰 기한이 30일인데 리프레시 토큰을 제공하지 않는다는 이슈가 있다고 하니 실제 프로덕트에서 사용하기엔 무리가 있지 않나 싶긴 하다 🥲**
 
 
 하지만 마지막 남은 작업이 하나 있다
