@@ -85,6 +85,7 @@ module.exports = {
       state: { userAbility, admin },
     } = ctx;
     
+    // strapi admin 을 통해 세팅해 준 field 값들을 여기서 가져와 수정할 수 있다.
     const { email, username, password, menus, card_info, age, address } = body;
 
     const { pm, entity: user } = await findEntityAndCheckPermissions(
