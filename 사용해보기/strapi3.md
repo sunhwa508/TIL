@@ -1,5 +1,7 @@
 # strapi로 api 만들고 커스텀하기!
 
+#### [strapi 커스텀 하기 전 기본설정](https://velog.io/@sunhwa508/strapi%EB%A1%9C-%EB%A7%8C%EB%93%A0-API-%EB%B0%B0%ED%8F%AC-%ED%9B%84-%EC%84%9C%EB%B9%84%EC%8A%A4%EC%97%90%EC%84%9C-%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0)
+
 ## Users 정보 수정하는 api
 지금부터 strapi를 살짝 변형해 users의 정보를 update 하는 api를 만들어볼것이다.<br />
 어떻게? 👇🏻
@@ -13,18 +15,17 @@
 
 👀
 
-[가장 큰 힌트를 얻었던 stack overflow](https://stackoverflow.com/questions/65973564/change-user-password-in-strapi) <br />
+[도움이 됐던 stack overflow](https://stackoverflow.com/questions/65973564/change-user-password-in-strapi) <br />
 [strapi git](https://github.com/strapi/strapi/blob/master/packages/strapi-plugin-users-permissions/controllers/user/admin.js) 
 
 
-
-커스텀할 api의 폴더를 만들어보자 이전 블로그에서 설명했던것 처럼 create-strapi-app을 사용하면 기본적으로 세팅이 되는 폴더가 있는데<br />
-그 중 extensions/users-permissions 에 파일을 추가해 커스텀 해 볼 예정이다.
+커스텀할 api의 폴더를 만들어보자 이전 블로그에서 설명했던것 처럼 create-strapi-app을 사용하면 기본적으로 세팅이 되는 폴더가 있다.<br />
+그 중 extensions/users-permissions 에 커스텀파일을 추가해 작성 할 예정이다.
 
 <image src="https://user-images.githubusercontent.com/61695175/128598028-cf0ccbbc-f012-461b-8274-b07a3a1eed6e.png" width="200px"/>
 
 
-## 해야할일
+## 폴더구조
 1. route.js 를 세팅해준다
 2. controllers 폴더에 api가 해줄 역할을 작성한다.
 
