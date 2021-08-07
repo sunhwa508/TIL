@@ -48,8 +48,11 @@ strapi는 그런 코린이들을 위한 오픈소스 이므로 무작정 따라�
 
 ### heroku 배포 세팅
 
-커스터마이징을 하기전 우리 프로젝트에 사용 될 수 있는지 테스트 해 보기위해 기본설정을 가진 strapi를 배포 해보기로 했다.
-strapi 다큐먼트에 자세한 설명이 나와있어 하나씩 단계를 밟아보았다.
+**heroku 배포전 세팅되어야할 요구사항 아래 링크를 참조!**<br />
+[heroku CLI Installation](https://strapi.io/documentation/developer-docs/latest/setup-deployment-guides/deployment/hosting-guides/heroku.html#heroku-install-requirements)
+
+
+api 커스터마이징 전 우리 프로젝트에 사용 될 수 있는지 테스트 해 보기위해 위에서 생성한 strapi프로젝트를 배포, 테스트 하기로 했다.
 
 Heroku는 기본적으로 git 과 연동되어 배포하는 형식임으로 깃에 레파지토리를 연동시켜 커밋 🏋🏻‍♂️
 
@@ -66,10 +69,9 @@ path: ./my-project/
 heroku create
 
 git push heroku HEAD:main
-
 ```
-여기서 ```custom-project-name.heroku.com```로 URL를 커스터마이징 해 줄 수 있지만 (저는 그냥 홈페이지에서 바꾸는게 편하더라고요 😅)
 
+여기서 ```heroku create custom-project-name```로 URL를 커스터마이징 해 줄 수 있다 (저는 그냥 제공된 URL로 세팅 😅)
 
 ![image](https://user-images.githubusercontent.com/61695175/128591703-12f1fb40-c1a8-4dfd-9470-9f528206fce6.png)
 
@@ -77,18 +79,18 @@ git push heroku HEAD:main
 
 ### heroku + postgreSQL DATABASE 연동
 
-이제부턴 기존 프로젝트 배포엔 없던 DATABASE Set-up 을 해줘야 한다! (갑자기 심장이 두근되기 시작한ㄷ..ㅏ)
+여기서 부턴 기존 프로젝트 배포엔 없던 DATABASE Set-up 과정이 필요하다! (갑자기 심장이 두근되기 시작한ㄷ..ㅏ)
 
-위에서 언급한것과 같이 SQL,, DATABASE 등 나에겐 아직 너무 생소한 용어들이다 😹
+위에서 언급한것과 같이 SQL,, DATABASE 등 나에겐 아직 너무 생소한 용어들이기에 😹
 
-영어는 너무 어렵지만 차근차근 해석해가며 읽어보기 시작했다.
+영어가 너무 많지만.. 차근차근 해석해가며 읽어보기 시작했다.
 
 ```
 Below you will find database options when working with Heroku. Please choose the correct database
  (e.g. PostgreSQL, MongoDB, etc.) and follow those instructions.
 ```
 
-아래에서 heroku와 함께 작동하는 DB를 찾을 것이고...괄호에 있는것같은 올바른 DB를 골라서 지시를 따라라..!
+아래에서 heroku와 함께 작동하는 DB를 찾을 것이고 , 괄호에 있는것같은 올바른 DB를 골라서 지시를 따라라 (?)
 맞나요!?🥲🥲
 
 바로 아래 명세서를 보니 PostgresSQL을 세팅하는 방법이 나와있다.. 나는 암묵적으로 DB로 Postgres를 사용하는 것에 동의를 하게 된다. 
