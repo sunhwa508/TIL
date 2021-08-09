@@ -41,7 +41,7 @@
 1. [기본원리](redux/redux.md)
 
 
-## 백엔드 없이도 잘해요
+##  STRAPI
 
 1. [백엔드역할을 하는 strapi 사용해보자](사용해보기/strapi.md)
 
