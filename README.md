@@ -44,4 +44,7 @@
 ## 백엔드 없이도 잘해요
 
 1. [백엔드역할을 하는 strapi 사용해보자](사용해보기/strapi.md)
+
 2. [strapi배포 후 서비스 적용해보기](사용해보기/strapi2.md)
+
+3. [strapi users 정보 업데이트 커스텀](사용해보기/strapi3.md)
