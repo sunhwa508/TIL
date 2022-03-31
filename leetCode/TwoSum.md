@@ -16,6 +16,10 @@ You can return the answer in any order.
  [2,3]
 ```
 
+### bigO 분석
+O(n^2) 
+
+
 ```javascript
 var twoSum = function(nums, target) {
     for(let i=0; i<nums.length;i++){
@@ -27,3 +31,27 @@ var twoSum = function(nums, target) {
     }
 };
 ```
+
+
+### bigO 분석
+O
+
+```javascript
+const twoSum = (nums, target) => {
+    const map = {};
+    
+    for(let i = 0; i < nums.length; i++) {
+        const diff = target - nums[i];
+        
+        if (map[diff] !== undefined && map[diff] != i) {
+            return [map[diff], i];
+        } else {
+            map[nums[i]] = i;
+        }
+    }
+    
+    return null;
+};
+```
+
+
