@@ -23,7 +23,7 @@ var romanToInt = function(s) {
     "CD",
     "CM",
   ]
-    const Roman = {
+  const Roman = {
       I: 1,
       V: 5,
       X: 10,
@@ -37,18 +37,18 @@ var romanToInt = function(s) {
       XC: 90,
       CD: 400,
       CM: 900
-    }
+ }
 
-    const result = s.split('');
-    for(let i =0; i<result.length; i++){
-      if(TwoRoman.includes(result[i] + result[i+1])){
-        map[i] = Roman[result[i]+ result[i+1]]
-        i = i+1
-      }else{
-        map[i] = Roman[result[i]]
-      }
+const result = s.split('');
+for(let i =0; i<result.length; i++){
+  if(TwoRoman.includes(result[i] + result[i+1])){
+      map[i] = Roman[result[i]+ result[i+1]]
+      i = i+1
+      return;
     }
-    return map.reduce((prev, curr)=> prev+curr,0)
+  map[i] = Roman[result[i]]
+  
+return map.reduce((prev, curr)=> prev+curr,0)
   }
 
 ```
