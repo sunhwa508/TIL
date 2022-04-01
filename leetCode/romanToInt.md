@@ -13,8 +13,7 @@ O(n)
  * @param {string} s
  * @return {number}
  */
- 
-var romanToInt = function(s) {
+ var romanToInt = function(s) {
   let map = [];
   const TwoRoman = [    
     "IV",
@@ -45,12 +44,11 @@ var romanToInt = function(s) {
       if(TwoRoman.includes(result[i] + result[i+1])){
         map[i] = Roman[result[i]+ result[i+1]]
         i = i+1
-        return;
-      }
+      }else{
         map[i] = Roman[result[i]]
+      }
     }
     return map.reduce((prev, curr)=> prev+curr,0)
   }
-
 ```
 
